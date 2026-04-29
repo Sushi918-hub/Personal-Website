@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sishi Li | Academic Portfolio</title>
+  <meta name="description" content="Sishi Li — PhD in Built Environment. Research Fellow at NUS. Thermal comfort, human well-being, smart buildings, occupant-centric control." />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23a8ccbd'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- STARTUP OVERLAY -->
+<div id="intro-overlay">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
+  <div id="intro-center" style="position:relative;z-index:1;text-align:center;">
+    <div class="intro-text" id="intro-hi">Hi</div>
+    <div class="intro-sub" id="intro-sub">Welcome to Sishi's Academic Space</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo" data-bind="navLogo">Sishi Li</a>
+  <div class="nav-links">
+    <a href="#news"         data-nav="news"></a>
+    <a href="#experience"   data-nav="experience"></a>
+    <a href="#projects"     data-nav="projects"></a>
+    <a href="#publications" data-nav="publications"></a>
+    <a href="#contact"      data-nav="contact"></a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="zh">中</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-chips" id="hero-chips"></div>
+        <div class="hero-name" id="hero-name"></div>
+        <div class="hero-tagline" data-bind="tagline"></div>
+        <div class="hero-affil" id="hero-affil"></div>
+        <p class="hero-bio" data-bind="bio"></p>
+        <div class="hero-actions">
+          <a href="uploads/cv_upload-1777390333364.pdf" download="Sishi_Li_CV.pdf" class="btn-primary">
+            ↓ <span data-bind="downloadCV"></span>
+          </a>
+          <a href="#contact" class="btn-outline" data-bind="getInTouch"></a>
+        </div>
+        <div class="academic-links">
+          <a href="https://www.researchgate.net/profile/Sishi-Li" target="_blank" rel="noopener" class="acad-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.586 0H4.414A4.414 4.414 0 000 4.414v15.172A4.414 4.414 0 004.414 24h15.172A4.414 4.414 0 0024 19.586V4.414A4.414 4.414 0 0019.586 0zM9.5 16.5H7v-9h2.5v9zm-1.25-10.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm9.25 10.25h-2.5v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5H8.5v-9h2.5v1.25A3.5 3.5 0 0117.5 12v4.5z"/></svg>
+            <span data-bind="acad0">ResearchGate</span>
+          </a>
+          <a href="https://orcid.org/0009-0001-4967-4298" target="_blank" rel="noopener" class="acad-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.9-2.853 3.9-3.722 0-2.172-1.384-3.722-3.9-3.722h-2.297z"/></svg>
+            <span data-bind="acad1">ORCID</span>
+          </a>
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57826317500" target="_blank" rel="noopener" class="acad-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 12.176c-.88 2.112-2.96 3.488-5.28 3.488-2.704 0-5.024-1.808-5.696-4.384l-1.12-4.272C8.816 4.48 6.944 3.2 4.8 3.2c-2.752 0-4.8 2.128-4.8 4.8 0 2.656 2.048 4.8 4.8 4.8.88 0 1.712-.24 2.432-.656l.464 1.776C6.72 14.416 5.776 14.72 4.8 14.72 2.16 14.72 0 12.56 0 9.92c0-2.624 2.16-4.72 4.8-4.72 2.544 0 4.672 1.744 5.28 4.16l1.12 4.272c.672 2.576 3.008 4.368 5.696 4.368 2.944 0 5.456-1.808 6.4-4.528l-1.696-.896z"/></svg>
+            <span data-bind="acad2">Scopus</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="uploads/photo-1777390625965.jpg" alt="Sishi Li" class="hero-photo" />
+        <div class="hero-badge" data-bind="heroBadge">@ NUS · Singapore</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="section">
+    <div class="section-inner">
+      <div class="section-label fade-up" data-bind="newsLabel"></div>
+      <div class="section-title fade-up" data-bind="newsTitle"></div>
+      <div class="news-grid fade-up" id="news-grid"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div class="section-label fade-up" data-bind="expLabel"></div>
+      <div class="section-title fade-up" data-bind="expTitle"></div>
+      <div class="exp-grid fade-up">
+        <div>
+          <div class="exp-col-title" data-bind="positions"></div>
+          <div class="exp-items" id="positions-list"></div>
+        </div>
+        <div>
+          <div class="exp-col-title" data-bind="education"></div>
+          <div class="exp-items" id="education-list"></div>
+        </div>
+      </div>
+
+      <div class="exp-extras">
+        <div class="fade-up col-network">
+          <div class="net-sub-title" data-bind="connections"></div>
+          <div class="network-wrap">
+            <div class="net-content-box" id="network-svg-mount"></div>
+          </div>
+        </div>
+        <div class="fade-up col-photos">
+          <div class="net-sub-title" data-bind="workWithMe"></div>
+          <div class="photos-col-inner">
+            <div class="photo-stack-wrap" id="photo-stack"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <div class="section-label fade-up" data-bind="projLabel"></div>
+      <div class="section-title fade-up" data-bind="projTitle"></div>
+      <div class="proj-grid fade-up" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section">
+    <div class="section-inner">
+      <div class="section-label fade-up" data-bind="pubLabel"></div>
+      <div class="section-title fade-up" data-bind="pubTitle"></div>
+      <div class="pub-filters fade-up" id="pub-filters"></div>
+      <div class="pub-list fade-up" id="pub-list"></div>
+
+      <div class="conferences-block">
+        <div class="section-label" data-bind="conferenceLabel"></div>
+        <div class="pub-list" id="conf-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="section-label fade-up" data-bind="contactLabel"></div>
+      <div class="section-title fade-up" data-bind="contactTitle"></div>
+      <div class="contact-grid fade-up">
+        <div>
+          <p class="contact-intro" data-bind="contactIntro"></p>
+          <div class="contact-info">
+            <a href="mailto:sishi_li25@nus.edu.sg" class="contact-row">
+              <div class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              sishi_li25@nus.edu.sg
+            </a>
+            <a href="tel:+6584549862" class="contact-row">
+              <div class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.19 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              </div>
+              (+65) 84549862
+            </a>
+          </div>
+          <div class="contact-profiles-block">
+            <div class="contact-profiles-label" data-bind="academicProfiles"></div>
+            <div class="contact-profiles">
+              <a href="https://www.researchgate.net/profile/Sishi-Li" target="_blank" rel="noopener" class="acad-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.586 0H4.414A4.414 4.414 0 000 4.414v15.172A4.414 4.414 0 004.414 24h15.172A4.414 4.414 0 0024 19.586V4.414A4.414 4.414 0 0019.586 0zM9.5 16.5H7v-9h2.5v9zm-1.25-10.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm9.25 10.25h-2.5v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5H8.5v-9h2.5v1.25A3.5 3.5 0 0117.5 12v4.5z"/></svg>
+                ResearchGate
+              </a>
+              <a href="https://orcid.org/0009-0001-4967-4298" target="_blank" rel="noopener" class="acad-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.9-2.853 3.9-3.722 0-2.172-1.384-3.722-3.9-3.722h-2.297z"/></svg>
+                ORCID: 0009-0001-4967-4298
+              </a>
+              <a href="https://www.scopus.com/authid/detail.uri?authorId=57826317500" target="_blank" rel="noopener" class="acad-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 12.176c-.88 2.112-2.96 3.488-5.28 3.488-2.704 0-5.024-1.808-5.696-4.384l-1.12-4.272C8.816 4.48 6.944 3.2 4.8 3.2c-2.752 0-4.8 2.128-4.8 4.8 0 2.656 2.048 4.8 4.8 4.8.88 0 1.712-.24 2.432-.656l.464 1.776C6.72 14.416 5.776 14.72 4.8 14.72 2.16 14.72 0 12.56 0 9.92c0-2.624 2.16-4.72 4.8-4.72 2.544 0 4.672 1.744 5.28 4.16l1.12 4.272c.672 2.576 3.008 4.368 5.696 4.368 2.944 0 5.456-1.808 6.4-4.528l-1.696-.896z"/></svg>
+                Scopus Author Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="cf-name">NAME</label>
+              <input class="form-input" id="cf-name" name="name" type="text" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">EMAIL</label>
+              <input class="form-input" id="cf-email" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-msg">MESSAGE</label>
+              <textarea class="form-input" id="cf-msg" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="form-submit" data-bind="formSend"></button>
+            <div class="form-error" id="cf-error" hidden></div>
+          </form>
+          <div class="form-success" id="cf-success" hidden>
+            <div class="check">✓</div>
+            <div data-bind="formSuccess"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span data-bind="footerLeft"></span>
+  <span data-bind="footerRight"></span>
+</footer>
+
+<!-- Lightbox for photo stack -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-grid" id="lightbox-grid"></div>
+  <button class="lightbox-close" id="lightbox-close" data-bind="lightboxClose"></button>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
